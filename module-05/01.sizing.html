@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* , 사용시 여러개 선택 가능. */
+      html,
+      body {
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 1.8rem;
+        width: 12rem;
+        background-color: orange;
+      }
+      p {
+        /* responsive design : 장치의 화면 크기에 따라서 레이아웃 변경
+                             : 모바일 기준(mobile first) -> PC */
+        /* adaptive design : 장치별 최적 크기의 레이아웃을 만들어두고 서버/클라이언트에서 고정 크기의 레이아웃을 보여줌 */
+        /* 기본적인 크기단위 : px */
+        /* font-size: 14px; */
+        /* em : 부모의 폰트 크기에 대한 상대크기 */
+        /* 1.5em이면 부모의 폰트 크기에 1.5배 */
+        /* font-size: 1.5em; */
+        /* rem : 최상위 부모 폰트 크기에 대한 상대크기 */
+        font-size: 1.5rem;
+
+        /* 너비 : width */
+        /* width: 500px; */
+
+        /* 부모요소 크기의 비율로도 설정 가능 */
+        /* width: 80%; */
+
+        /* vw(viewport width) : 브라우저 표시영역 기준으로 상대 비율 */
+        /* 80vw, 뷰포트크기대비 80% */
+        width: 15vw;
+        /* vh(viewport height) : 뷰포트높이대비 */
+        /* width: 15vh; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header Text</h1>
+    <div style="width: 50%">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat,
+        voluptas hic quae iusto quis minima iure deserunt, ipsam quo explicabo,
+        voluptate placeat ad. Debitis sed praesentium, perferendis inventore
+        repellat quisquam!
+      </p>
+    </div>
+  </body>
+</html>
