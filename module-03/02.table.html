@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1건짜리 데이터를 표시 -->
+    <!-- table = 표 -->
+    <table>
+      <!-- table 안에 tbody를 가장 먼저 써야한다 (중요!) -->
+      <tbody>
+        <!-- tr = table row = 행 -->
+        <tr>
+          <th>이름</th>
+          <td>조정빈</td>
+        </tr>
+        <tr>
+          <!-- th = table head = 행 제목 -->
+          <th>나이</th>
+          <!-- td = table data = 행 값 -->
+          <td>23</td>
+        </tr>
+        <tr>
+          <th>연락처</th>
+          <td>010-5614-0468</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br /><br />
+
+    <!-- 여러건의 데이터를 표시한다 -->
+    <table>
+      <!-- thead = 머리말 -->
+      <thead>
+        <th>이름</th>
+        <th>나이</th>
+        <th>연락처</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>조정빈</td>
+          <td>23</td>
+          <td>010-5614-0468</td>
+        </tr>
+        <tr>
+          <td>ACE</td>
+          <td>1</td>
+          <td>010-1111-1111</td>
+        </tr>
+        <tr>
+          <td>QUEEN</td>
+          <td>12</td>
+          <td>010-1212-1212</td>
+        </tr>
+      </tbody>
+      <!-- 요약, 데이터건수, 페이징(1~10, < > [1]) -->
+      <tfoot>
+        <tr>
+          <!-- span(늘리기) -->
+          <!-- colspan = column span -->
+          <td colspan="3" width="500">
+            <strong>3</strong>
+            <em>건 입니다</em>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+
+  <br /><br />
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">data 1</td>
+        <td>data 2</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
