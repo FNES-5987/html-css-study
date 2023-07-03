@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>레시피 모음집</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
-        width: 100vw;
+        width: 100%;
+        margin: 0 auto;
         background-color: #ede0d4;
+      }
+      article {
+        width: 95%;
+        margin: 0 auto;
       }
       #chiken {
         width: 11rem;
@@ -28,6 +36,24 @@
         width: 13rem;
         color: #f4f1de;
         background-color: #e07a5f;
+      }
+      table {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        border: 4px solid black;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        width: 50%;
+        border: 1px solid black;
+      }
+      img {
+        width: 100%;
+        height: 500px;
       }
     </style>
   </head>
@@ -58,7 +84,7 @@
       전참시에서 유병재가 만든 찜닭!
 
       <h3>재료 목록</h3>
-      <table border="1">
+      <table>
         <thead>
           <th>재료</th>
           <th>계량</th>
@@ -137,7 +163,7 @@
       콩국수가 싫다면 잣국수!
 
       <h3>재료 목록</h3>
-      <table border="1">
+      <table>
         <thead>
           <th>재료</th>
           <th>계량</th>
@@ -193,7 +219,7 @@
       맛있는 토마토 바질 소스로 만들어보는 파스타!!
 
       <h3>재료목록</h3>
-      <table border="1">
+      <table>
         <thead>
           <th>재료</th>
           <th>계량</th>
