@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        font-size: 20px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        padding-left: 0.5rem;
+      }
+
+      /* 첫번째 요소 ul > li만 선택 */
+      /* li:first-child {
+        background-color: red;
+      } */
+
+      /* 마지막 요소만 선택 */
+      /* li:last-child {
+        background-color: blue;
+      } */
+
+      /* 홀수번쨰만 */
+      li:nth-child(2n-1) {
+        background-color: yellow;
+      }
+      /* 짝수번째만 */
+      li:nth-child(2n) {
+        background-color: brown;
+      }
+
+      /* chlid 는 몇번째 요소인지만 인지 */
+      /* 4번째 자식이 p 인 경우 선택 */
+      /* p:nth-child(4) {
+        color: blue;
+      } */
+
+      /* of type은 같은 태그 중 몇번째 요소인지 인지 */
+      /* p에 해당하는 자식요소 중 3번째를 선택 */
+      p:nth-of-type(3) {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+    </ul>
+    <div>
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+      <h1>Lorem, ipsum dolor.</h1>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+  </body>
+</html>
