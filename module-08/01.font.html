@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        /* 기본 14px */
+        font-size: 20px;
+      }
+
+      h1:nth-of-type(1) {
+        /* 서체 적용 */
+        /* font-family: 서체명 */
+        /* 서체명, "서 체 명" */
+
+        /* 서체 여러개 지정, 왼쪽 부터 적용 */
+        /* 왼쪽것이 없다면 오른쪽으로 넘어감 */
+        /* san-serif: 브라우저의 기본폰트 = 고딕체 */
+        /* 고딕체 : 꾸밈 표시가 없는 서체, 굵기 동일 */
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1:nth-of-type(2) {
+        /* serif: 브라우저의 기본폰트인테 명조체 */
+        /* 명조체: 꾸밈이 있는 서체(붓글씨) */
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      h1:nth-of-type(3) {
+        font-family: "Noto Sans KR", sans-serif;
+        font-style: italic;
+        /* font-weight: 글씨체 굵기 */
+        /* 100 ~ 900 있는것만 쓴다. 없다면 가까운 쪽 */
+        font-weight: 300;
+
+        border: 1px solid black;
+        height: 200px;
+        /* 가로 중앙 정렬 */
+        text-align: center;
+        /* 세로 중앙 정렬 */
+        /* 요소 높이만큼 line-height를 준다 */
+        line-height: 200px;
+      }
+
+      p {
+        font-weight: 700;
+
+        /* 행간 : 행 높이 */
+        line-height: 1.46;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>모든 인류 구성원의</h1>
+    <p>
+      <strong> 가</strong>나다라마바사아자차카타파하
+      가나다라마바사아자차카타파하 가나다라마바사아자차카타파하
+      가나다라마바사아자차카타파하 가나다라마바사아자차카타파하
+      가나다라마바사아자차카타파하
+    </p>
+  </body>
+</html>

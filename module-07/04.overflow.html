@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 200px;
+        height: 100px;
+        border: 3px solid black;
+      }
+
+      P:nth-of-type(1) {
+        /* 컨텐츠가 요소 크기 밖으로 나가느 경우 */
+        /* overflow : hidden = 숨김처리 */
+        overflow: hidden;
+      }
+
+      p:nth-of-type(2) {
+        overflow: scroll;
+      }
+
+      p:nth-of-type(3) {
+        overflow-y: scroll;
+      }
+
+      p:nth-of-type(4) {
+        overflow-y: auto;
+      }
+
+      p:nth-of-type(5) {
+        overflow-x: hidden;
+
+        /* nowrap : 텍스트 컨텐츠를 아래로 안내린다. */
+        white-space: nowrap;
+        /* 크기를 넘어가는 영역을 ... 으로 변환 */
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+      corrupti iste nulla ipsa adipisci optio porro sed itaque id debitis,
+      suscipit sit qui soluta ex ullam tenetur. A, praesentium ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+      corrupti iste nulla ipsa adipisci optio porro sed itaque id debitis,
+      suscipit sit qui soluta ex ullam tenetur. A, praesentium ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+      corrupti iste nulla ipsa adipisci optio porro sed itaque id debitis,
+      suscipit sit qui soluta ex ullam tenetur. A, praesentium ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+      corrupti iste nulla ipsa adipisci optio porro sed itaque id debitis,
+      suscipit sit qui soluta ex ullam tenetur. A, praesentium ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+      corrupti iste nulla ipsa adipisci optio porro sed itaque id debitis,
+      suscipit sit qui soluta ex ullam tenetur. A, praesentium ipsam.
+    </p>
+  </body>
+</html>
