@@ -22,14 +22,34 @@
       body > div {
         height: max-content;
       }
-      a:hover {
+      article,
+      nav a:hover {
         background-color: #80ffdb;
       }
       nav {
         position: fixed;
-        width: 95%;
-        margin-top: 100px;
-        margin-left: 5%;
+        width: 100%;
+      }
+      nav ul {
+        display: flex;
+        width: 80%;
+        margin-left: 0;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: #ede0d4;
+        width: max-content;
+      }
+      @media (min-width: 1000px) {
+        nav > ul {
+          margin-left: 20%;
+          background-color: #ede0d4;
+          text-align: center;
+          flex-direction: row;
+          justify-content: space-evenly;
+          gap: 2rem;
+          width: 60%;
+        }
       }
       aside {
         position: fixed;
@@ -42,7 +62,7 @@
         width: 20%;
         background-color: #ede0d4;
       }
-      aside > div > img {
+      aside img {
         width: 100%;
         height: 70px;
         padding-right: 5px;
@@ -60,18 +80,12 @@
         color: #f4f1de;
         background-color: #e07a5f;
       }
-      nav > ul {
-        border: 1px solid black;
-        box-shadow: 10px 10px 30px black;
-        background-color: #ede0d4;
-        float: left;
-        text-align: center;
-      }
       article {
         background-color: #ffffff;
         width: 60%;
         margin-left: 20%;
         margin-top: 43px;
+        padding-top: 40px;
         height: max-content;
         font-family: "Nanum Pen Script", sans-serif;
         font-size: 26px;
@@ -140,18 +154,21 @@
 
       <aside>
         <div>
-          <img
-            src="https://recipe1.ezmember.co.kr/cache/rpe/2023/06/30/39391219a8a4ebc5a6f36d3891c757491.jpg"
-            alt="광고1"
-          />
-          <img
-            src="https://recipe1.ezmember.co.kr/cache/shop/2023/06/29/d032c548ecfa3879322e64cd97952898.jpg"
-            alt="광고2"
-          />
-          <img
-            src="https://recipe1.ezmember.co.kr/cache/shop/2023/06/28/6c6c6e14ffd13d7aad55273752f839be.jpg"
-            alt="광고3"
-          />
+          <a href="https://www.10000recipe.com/event/422" target="_blank"
+            ><img
+              src="https://recipe1.ezmember.co.kr/cache/rpe/2023/06/30/39391219a8a4ebc5a6f36d3891c757491.jpg"
+              alt="광고1"
+          /></a>
+          <a href="https://www.10000recipe.com/event/422" target="_blank"
+            ><img
+              src="https://recipe1.ezmember.co.kr/cache/shop/2023/06/29/d032c548ecfa3879322e64cd97952898.jpg"
+              alt="광고2"
+          /></a>
+          <a href="https://www.10000recipe.com/event/422" target="_blank"
+            ><img
+              src="https://recipe1.ezmember.co.kr/cache/shop/2023/06/28/6c6c6e14ffd13d7aad55273752f839be.jpg"
+              alt="광고3"
+          /></a>
         </div>
       </aside>
 
