@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-left: 50px;
+        margin-top: 50px;
+        height: 100px;
+        width: 100px;
+        background-color: green;
+
+        /* transition: s/ms */
+        /* transition: 지속시간 */
+        /* transition-duration: 적용할속성 지속시간 지연시간 타이밍함수 */
+        /* 적용 속성의 기본은 all로 되어있다. */
+        transition: all 0.5s 0.1s ease-in;
+        /* transition-duration: 1s; */
+
+        transition-timing-function: ease-out;
+      }
+      div:hover {
+        /* width: 150px;
+        height: 150px; */
+
+        /* transform: 변경시킬 함수(값) */
+        /* scale(배수값-실수) */
+        /* transform: scale(1.5); */
+
+        /* translate축(값) */
+        /* 축 방향으로 값만큼 이동시키기 */
+
+        /* rotate(값deg) */
+        /* 회전시키기 */
+
+        /* skew(값deg) */
+        /* 비틀기 */
+        transform: rotate(90deg);
+        transform: translateX(200px) rotate(90deg) skew(30deg);
+        background-color: red;
+
+        /* height: 150px; */
+
+        /* transform 기준 위치 변경 */
+        /* 기본은 center */
+        transform-origin: left;
+      }
+    </style>
+  </head>
+  <!--트랜지션(transition)이란
+      속성 값의 변화가 있을 때 중간 과정을 표현 -->
+  <!-- 속성 값은 숫자이거나 숫자로 표현할 수 있는 경우에만 적용 가능 -->
+  <body>
+    <div></div>
+    <p>Lorem, ipsum dolor.</p>
+  </body>
+</html>
