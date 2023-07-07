@@ -12,8 +12,11 @@
         width: 80vw;
         height: 80vh;
         background-color: black;
-        gap: 1rem;
+        gap: 1 rem;
 
+        /* 얼마나 멀리있는 시점으로 볼 것인가 */
+        /* MDN: z=0 평면과 사용자 사이의 거리 */
+        /* 가까이 갈수록 3d효과가 강해짐 */
         perspective: 500px;
       }
 
@@ -25,6 +28,8 @@
         transform: rotateY(45deg);
       }
       .card:nth-of-type(1) {
+        /* 요소 기준으로도 perspective로 줄 수 있다 */
+        /* transform: perspective(100px) rotateY(45deg); */
         transform: rotateY(45deg);
       }
       .card:nth-of-type(2) {

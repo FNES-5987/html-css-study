@@ -3,11 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>레시피 모음집</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
       * {
         box-sizing: border-box;
+      }
+
+      .wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas:
+          "header header header"
+          "nav nav nav"
+          "article article aside"
+          "footer footer footer";
       }
       body {
         position: relative;
@@ -19,15 +30,37 @@
         background-size: cover;
         background-image: url(https://images.unsplash.com/photo-1688435088702-e799b778d970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
       }
-      .wrapper {
-        display: grid;
-        width: 100%;
-        grid-template-areas:
-          "header"
-          "nav"
-          "aside"
-          "article"
-          "footer";
+      article,
+      nav a:hover {
+        background-color: #80ffdb;
+      }
+      nav {
+        grid-area: nav;
+        position: sticky;
+        top: 41px;
+      }
+      nav > ul {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 0;
+        background-color: #ede0d4;
+      }
+      ul > li {
+        display: inline-block;
+      }
+      aside {
+        grid-area: aside;
+        position: sticky;
+        height: fit-content;
+        top: 62px;
+      }
+      aside > div {
+        margin-left: 10px;
+        background-color: #ede0d4;
+      }
+      aside img {
+        height: 70px;
       }
       header {
         grid-area: header;
@@ -40,36 +73,8 @@
         color: #f4f1de;
         background-color: #e07a5f;
       }
-      nav {
-        grid-area: nav;
-        position: sticky;
-        background-color: #ede0d4;
-        top: 41px;
-      }
-      nav > ul {
-        justify-content: space-evenly;
-        text-align: center;
-        padding: 0;
-      }
-      ul > li {
-        display: inline-block;
-      }
-      aside {
-        display: flex;
-        justify-content: space-evenly;
-        grid-area: aside;
-        width: 100%;
-        height: fit-content;
-      }
-      aside > div {
-        background-color: #ede0d4;
-        height: 10%;
-      }
-      a > img {
-        width: 100%;
-        height: 50px;
-      }
       article {
+        margin-left: 10%;
         grid-area: article;
         background-color: #ffffff;
         height: max-content;
@@ -80,36 +85,8 @@
       footer {
         grid-area: footer;
         bottom: 0;
+        height: 100px;
         background-color: gray;
-      }
-      @media (min-width: 560px) {
-        .wrapper {
-          display: grid;
-          gap: 20px;
-          width: 100%;
-          grid-template-columns: 2fr 7fr 2fr;
-          grid-template-areas:
-            "header header header"
-            "nav article aside"
-            "footer footer footer";
-        }
-        nav {
-          position: flex;
-          background-color: #ede0d4;
-        }
-        nav > ul {
-          flex-direction: column;
-          text-align: center;
-        }
-        ul > li {
-          display: block;
-        }
-        aside {
-          display: flex;
-          position: sticky;
-          justify-content: center;
-          top: 100px;
-        }
       }
       #chiken {
         width: 11rem;
@@ -128,7 +105,7 @@
       }
       table {
         margin: 0 auto;
-        width: 80%;
+        width: 50%;
         height: auto;
         border: 4px solid black;
         border-right-style: hidden;
@@ -144,14 +121,40 @@
         background-color: #e07a5f;
       }
       p > img {
-        width: 100%;
-        height: 200px;
+        width: 95%;
+        height: 500px;
         margin: 0 auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      @media (max-width: 560px) {
+        .wrapper {
+          grid-template-areas:
+            "header"
+            "aside"
+            "nav"
+            "article"
+            "footer";
+        }
+        article {
+          width: 100%;
+          margin: 0;
+        }
+        aside {
+          display: flex;
+          justify-content: space-evenly;
+          text-align: center;
+          padding: 0;
+        }
+        aside > div {
+          display: inline-block;
+          margin: 0;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="wrapper"></div>
     <header>
       <h1>레시피 모음집</h1>
     </header>
@@ -162,6 +165,7 @@
         <li><a href="#pasta">해산물 바질 파스타</a></li>
       </ul>
     </nav>
+
     <div class="wrapper">
       <aside>
         <div>
@@ -186,6 +190,7 @@
           /></a>
         </div>
       </aside>
+
       <article>
         <h2><p id="chiken">꽈리고추닭볶음</p></h2>
         <p>
@@ -258,7 +263,7 @@
           <li>후추, 통깨를 뿌려 완성한다.</li>
         </ol>
         <a href="https://www.10000recipe.com/recipe/6971271" target="_blank"
-          >꽈리고추닭볶음 레시피 원문 바로가기</a
+          >꽈리고추닭볶음 레시피 원문</a
         >
         <hr />
 
@@ -312,7 +317,7 @@
           </li>
         </ol>
         <a href="https://www.10000recipe.com/recipe/6961919" target="_blank"
-          >잣국수 레시피 원문 바로가기</a
+          >잣국수 레시피 원문</a
         >
         <hr />
 
@@ -386,10 +391,11 @@
         </ol>
 
         <a href="https://www.10000recipe.com/recipe/7001320" target="_blank"
-          >토마토파스타소스 레시피 원문 바로가기</a
+          >토마토파스타소스 레시피 원문</a
         >
       </article>
     </div>
+
     <footer>
       <hr />
       레시피들은
@@ -399,3 +405,4 @@
     </footer>
   </body>
 </html>
+<command></command>
